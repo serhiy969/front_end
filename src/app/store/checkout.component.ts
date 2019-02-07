@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { NgForm } from '@angular/forms';
 import { OrderRepository } from "../model/order.repository";
 import { Order } from "../model/order.model";
- @Component({    
+ @Component({  
+	moduleId: module.id,  
 	templateUrl: "checkout.component.html",
     styleUrls: ["checkout.component.css"]
 	}) 
