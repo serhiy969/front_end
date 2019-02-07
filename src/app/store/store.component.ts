@@ -6,8 +6,8 @@ import { Cart } from '../model/cart.model';
 import { Router } from '@angular/router'; 
 
 @Component({
-	selector: "store",
-	//moduleId: module.id,
+	selector: 'store',
+	moduleId: module.id,
 	templateUrl: "store.component.html"
 })
 
@@ -48,9 +48,9 @@ export class StoreComponent {
 			length / this.productsPerPage)
 	}
 
-	addProductToCart(product: Product) {  
+	addProductToCart(product: Product) {
 	  this.cart.addLine(product);  
-	  this.router.navigateByUrl("/cart");  
+	  this.router.navigateByUrl("/cart");
 	} 
 	// get pageNumbers(): number[] {
 	// 	return Array(Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage))

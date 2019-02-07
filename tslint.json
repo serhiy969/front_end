@@ -15,9 +15,12 @@
     "import-blacklist": [true, "rxjs"],
     "import-spacing": true,
     "indent": [
-      true,
-      "spaces"
-    ],
+		true, "tabs"
+	],
+	"jsRules": {
+		"indent": [true, "tabs"],
+		// a bunch more rules
+	  },
     "interface-over-type-literal": true,
     "label-position": true,
     "max-line-length": [
