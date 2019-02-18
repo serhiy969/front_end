@@ -1,15 +1,45 @@
-<div class="navbar navbar-inverse bg-inverse">  
-    <a class="navbar-brand">SPORTS STORE</a>  
-</div>  
-<div class="m-a-1">
+
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Sport Store</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Dropdown
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Something else here</a>
+			  </div>
+			</li>		
+		  </ul>
+		  <cart-summary></cart-summary> 
+		 <!-- <mat-form-field class="search-form">
+		   <input matInput placeholder="Search Picture" type="text">
+	   </mat-form-field>
+		<button button="submit" mat-raised-button color="primary">Search</button> -->
+		</div>
+	  </nav>
+	<div class ="row justify-content-md-center">
     <h2 class="text-xs-center">Your Cart</h2>
-    <table class="table table-bordered table-striped p-a-1">
+    <table class="table table-responsive-sm table-bordered table-striped p-a-1">
         <thead>
             <tr>
                 <th>Quantity</th>
                 <th>Product</th>
                 <th class="text-xs-right">Price</th>
-                <th class="text-xs-right">Subtotal</th>
+				<th class="text-xs-right">Subtotal</th>
+				<th class="text-xs-right">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -49,13 +79,14 @@
                 </td>
             </tr>
         </tfoot>
-    </table>
+	</table>
+	<div class="text-xs-center">
+			<button class="btn btn-primary" routerLink="/store">Continue Shopping</button>
+			<button class="btn btn-secondary" routerLink="/checkout" 
+					[disabled]="cart.lines.length == 0">
+				Checkout
+			</button>
+		</div>
+   </div>
 </div>
 
-<div class="text-xs-center">
-    <button class="btn btn-primary" routerLink="/store">Continue Shopping</button>
-    <button class="btn btn-secondary" routerLink="/checkout" 
-            [disabled]="cart.lines.length == 0">
-        Checkout
-    </button>
-</div>

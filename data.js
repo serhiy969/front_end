@@ -33,7 +33,7 @@ module.exports = function() {
         name: "Stadium",
         category: "Soccer",
         description: "Flat-packed 35,000-seat stadium",
-        price: 79500
+        price: 7950
       },
       {
         id: 6,
@@ -51,7 +51,7 @@ module.exports = function() {
       },
       {
         id: 8,
-        name: "Human Chess Board",
+        name: "Human Ches Board",
         category: "Chess",
         description: "A fun game for the family",
         price: 75
